@@ -5,7 +5,7 @@ public class RatBaker : Baker<RatAuthoring>
 {
     public override void Bake(RatAuthoring authoring)
     {
-        Entity entity = GetEntity(TransformUsageFlags.Dynamic); // так как крыса будет двигаться
+        Entity entity = GetEntity(TransformUsageFlags.Dynamic); 
 
         AddComponent(entity, new RatHealth 
         { 
@@ -19,8 +19,9 @@ public class RatBaker : Baker<RatAuthoring>
             Stamina = authoring.StartStamina,
             MaxStamina = authoring.StartStamina,
             StaminaRegen = authoring.StartStaminaRegen,
-            // TargetPosition = float3.zero
             TargetPosition = new float3(10f, 0f, 10f)
         });
+
+        AddBuffer<DamageRecord>(entity);
     }
 }

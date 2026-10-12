@@ -128,5 +128,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RatAuthoring
   StartHealth: 100
   StartSpeed: 3.5
-  StartStamina: 50
-  StartStaminaRegen: 5
+  StartStamina: 100
+  StartStaminaRegen: 1
